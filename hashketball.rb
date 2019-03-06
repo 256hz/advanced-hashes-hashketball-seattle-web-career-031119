@@ -23,7 +23,14 @@ def game_hash
     }
 end
 
-
+def player_stats(player_query)
+  game_hash.keys.each do |team|
+    if game_hash[team][:players].keys.include?(player_query)
+      return game_hash[team][:players][player_query]
+    end
+  end
+end
+      
 #puts game_hash
 
 def num_points_scored(player_query)
@@ -80,5 +87,6 @@ def player_numbers(team_query)
   end
   jerseys
 end
+
 
 
