@@ -1,3 +1,4 @@
+require 'pry'
 
 def game_hash
   #team, team_name, colors, players, number, shoe, points, rebounds, assists, blocks, slam_dunks) 
