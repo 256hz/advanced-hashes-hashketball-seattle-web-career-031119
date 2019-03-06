@@ -1,6 +1,6 @@
 require 'pry'
 
-def game_hash
+def game_has
   #team, team_name, colors, players, number, shoe, points, rebounds, assists, blocks, slam_dunks) 
   {
     :home => {:team_name => "Brooklyn Nets", :colors => ["Black", "White"],
@@ -23,10 +23,11 @@ def game_hash
     }
 end
 
-#game_hash
+
 #puts game_hash
 
 def num_points_scored(player_query)
+  game_hash = game_has
   game_hash.keys.each do |team|
     puts game_hash[team][:players].keys
     binding.pry
