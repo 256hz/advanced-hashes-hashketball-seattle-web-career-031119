@@ -45,11 +45,21 @@ def shoe_size(player_query)
     #puts game_hash[team][:players].keys
     #binding.pry
     if game_hash[team][:players].keys.include?(player_query)
-      size = game_hash[team][:players][player_query][:shoe]
+      return game_hash[team][:players][player_query][:shoe]
     end
   end
   size
 end
+
+def team_colors(team_query)
+  colors = []
+  game_hash.keys.each do |team|
+    if game_hash[team][team_name] == team_query
+      return game_hash[team][:colors]
+    end
+  end
+end
+
 
 
 
