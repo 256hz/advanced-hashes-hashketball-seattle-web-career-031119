@@ -30,7 +30,7 @@ def num_points_scored(player_query)
   #game_hash = game_has
   game_hash.keys.each do |team|
     puts game_hash[team][:players].keys
-    binding.pry
+    #binding.pry
     if game_hash[team][:players].keys.include?(player_query)
       points = game_hash[team][:players][player_query][:points]
     end
