@@ -40,6 +40,15 @@ def num_points_scored(player_query)
 end
 
 def shoe_size(player_query)
+  size = 0
+  game_hash.keys.each do |team|
+    #puts game_hash[team][:players].keys
+    #binding.pry
+    if game_hash[team][:players].keys.include?(player_query)
+      size = game_hash[team][:players][player_query][:shoe]
+    end
+  end
+  size
 end
 
 
