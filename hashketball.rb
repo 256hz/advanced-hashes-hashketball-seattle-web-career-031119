@@ -23,6 +23,20 @@ def game_hash
     }
 end
 
+def big_shoe_size
+  biggest_shoe = 0
+  biggest_rebounds = 0
+  game_hash.keys.each do |team|
+    game_hash[team][:players].keys.each do |player|
+      if game_hash[team][:players][player][:shoe] > biggest_shoe
+        biggest_shoe = game_hash[team][:players][player][:shoe]
+        biggest_rebounds = game_hash[team][:players][player][:rebounds]
+      end
+    end
+  end
+  biggest_rebounds
+end
+
 def player_stats(player_query)
   game_hash.keys.each do |team|
     if game_hash[team][:players].keys.include?(player_query)
