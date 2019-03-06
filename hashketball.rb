@@ -54,7 +54,7 @@ end
 def team_colors(team_query)
   colors = []
   game_hash.keys.each do |team|
-    if game_hash[team][team_name] == team_query
+    if game_hash[team][:team_name] == team_query
       return game_hash[team][:colors]
     end
   end
