@@ -32,9 +32,10 @@ def num_points_scored(player_query)
     puts game_hash[team][:players].keys
     binding.pry
     if game_hash[team][:players].keys.include?(player_query)
-      game_hash[team][:players][player_query][:points]
+      points = game_hash[team][:players][player_query][:points]
     end
   end
+  points
 end
 
 num_points_scored("Brendan Haywood")
