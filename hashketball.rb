@@ -74,7 +74,7 @@ def player_numbers(team_query)
     if game_hash[team][:team_name] == team_query
       binding.pry
       game_hash[team][:players].keys.each do |player|
-        jerseys << game_hash[team][player][:number]
+        jerseys << game_hash[team][:players][player][:number]
       end
     end
   end
