@@ -28,7 +28,7 @@ end
 
 def num_points_scored(player_query)
   #game_hash = game_has
-  #points = 0
+  points = 0
   game_hash.keys.each do |team|
     #puts game_hash[team][:players].keys
     #binding.pry
