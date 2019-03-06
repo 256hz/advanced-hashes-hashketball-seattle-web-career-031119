@@ -23,7 +23,7 @@ def game_hash
     }
 end
 
-def big_shoe_size
+def big_shoe_rebounds
   biggest_shoe = 0
   biggest_rebounds = 0
   game_hash.keys.each do |team|
