@@ -40,7 +40,7 @@ def num_points_scored(player_query)
 end
 
 def shoe_size(player_query)
-  size = 0
+  #size = 0
   game_hash.keys.each do |team|
     #puts game_hash[team][:players].keys
     #binding.pry
@@ -60,6 +60,10 @@ def team_colors(team_query)
   end
 end
 
-
+def team_names
+  game_hash.keys.each do |team|
+    game_hash[team][:team_name]
+  end
+end
 
 
